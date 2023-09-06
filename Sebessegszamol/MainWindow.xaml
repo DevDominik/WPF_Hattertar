@@ -1,0 +1,131 @@
+﻿<Window x:Class="Sebessegszamol.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sebessegszamol"
+        mc:Ignorable="d"
+        Title="Átviteli Sebesség Számoló" Height="450" Width="300"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Rectangle>
+            <Rectangle.Fill>
+                <SolidColorBrush>
+                    <SolidColorBrush.Color>
+                        <Color>
+                            <Color.A>255</Color.A>
+                            <Color.R>20</Color.R>
+                            <Color.G>20</Color.G>
+                            <Color.B>20</Color.B>
+                        </Color>
+                    </SolidColorBrush.Color>
+                </SolidColorBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle Margin="60 20 60 380">
+            <Rectangle.Fill>
+                <SolidColorBrush>
+                    <SolidColorBrush.Color>
+                        <Color>
+                            <Color.A>255</Color.A>
+                            <Color.R>35</Color.R>
+                            <Color.G>20</Color.G>
+                            <Color.B>20</Color.B>
+                        </Color>
+                    </SolidColorBrush.Color>
+                </SolidColorBrush>
+            </Rectangle.Fill>
+            <Rectangle.Stroke>
+                <SolidColorBrush>
+                    <SolidColorBrush.Color>
+                        <Color>
+                            <Color.A>190</Color.A>
+                            <Color.R>40</Color.R>
+                            <Color.G>40</Color.G>
+                            <Color.B>40</Color.B>
+                        </Color>
+                    </SolidColorBrush.Color>
+                </SolidColorBrush>
+            </Rectangle.Stroke>
+        </Rectangle>
+        <Label Content="KAPACITÁS" Foreground="LightGray" Padding="1" Margin="60 20 60 380" VerticalAlignment="Center" HorizontalContentAlignment="Center" FontSize="20"></Label>
+        <Rectangle Margin="20 60 100 350">
+            <Rectangle.Stroke>
+                <SolidColorBrush>
+                    <SolidColorBrush.Color>
+                        <Color>
+                            <Color.A>190</Color.A>
+                            <Color.R>40</Color.R>
+                            <Color.G>40</Color.G>
+                            <Color.B>40</Color.B>
+                        </Color>
+                    </SolidColorBrush.Color>
+                </SolidColorBrush>
+            </Rectangle.Stroke>
+        </Rectangle>
+        <TextBox x:Name="tbKapacitas" Margin="10 60 100 350" HorizontalContentAlignment="Right"></TextBox>
+        <ComboBox x:Name="cbKapacitas" Margin="220 60 20 350" Background="Transparent"></ComboBox>
+        <Rectangle Margin="60 100 60 300">
+            <Rectangle.Fill>
+                <SolidColorBrush>
+                    <SolidColorBrush.Color>
+                        <Color>
+                            <Color.A>255</Color.A>
+                            <Color.R>35</Color.R>
+                            <Color.G>20</Color.G>
+                            <Color.B>20</Color.B>
+                        </Color>
+                    </SolidColorBrush.Color>
+                </SolidColorBrush>
+            </Rectangle.Fill>
+            <Rectangle.Stroke>
+                <SolidColorBrush>
+                    <SolidColorBrush.Color>
+                        <Color>
+                            <Color.A>190</Color.A>
+                            <Color.R>40</Color.R>
+                            <Color.G>40</Color.G>
+                            <Color.B>40</Color.B>
+                        </Color>
+                    </SolidColorBrush.Color>
+                </SolidColorBrush>
+            </Rectangle.Stroke>
+        </Rectangle>
+        <Label Content="ÁTVITELI SEBESSÉG" Foreground="LightGray" Margin="60 100 60 300" VerticalAlignment="Center" HorizontalContentAlignment="Center" FontSize="20"></Label>
+        <Rectangle Margin="15 145 95 260">
+            <Rectangle.Stroke>
+                <SolidColorBrush>
+                    <SolidColorBrush.Color>
+                        <Color>
+                            <Color.A>190</Color.A>
+                            <Color.R>40</Color.R>
+                            <Color.G>40</Color.G>
+                            <Color.B>40</Color.B>
+                        </Color>
+                    </SolidColorBrush.Color>
+                </SolidColorBrush>
+            </Rectangle.Stroke>
+        </Rectangle>
+        <Slider x:Name="sliSebesseg" Margin="20 150 100 265" Maximum="500" Minimum="10" TickFrequency="10" IsSnapToTickEnabled="True"/>
+        <Label Content="10" Foreground="LightGray" Margin="20 180 255 230" VerticalAlignment="Center" HorizontalContentAlignment="Left" FontSize="13"></Label>
+        <Label Content="500" Foreground="LightGray" Margin="160 180 95 230" VerticalAlignment="Center" HorizontalContentAlignment="Right" FontSize="13"></Label>
+        <Label x:Name="lbSebesseg" Content="" Foreground="LightGray" Margin="70 180 150 230" VerticalAlignment="Center" HorizontalContentAlignment="Center" FontSize="13"></Label>
+        <ComboBox x:Name="cbSebesseg" Margin="220 145 20 260" Background="Transparent"></ComboBox>
+        <Button x:Name="btnSzamol" Background="DimGray" Margin="70 260 70 150" Foreground="LightGray" Content="SZÁMOL" Click="btnSzamol_Click"></Button>
+        <Rectangle Margin="10 380 10 10">
+            <Rectangle.Stroke>
+                <SolidColorBrush>
+                    <SolidColorBrush.Color>
+                        <Color>
+                            <Color.A>190</Color.A>
+                            <Color.R>40</Color.R>
+                            <Color.G>40</Color.G>
+                            <Color.B>40</Color.B>
+                        </Color>
+                    </SolidColorBrush.Color>
+                </SolidColorBrush>
+            </Rectangle.Stroke>
+        </Rectangle>
+        <Label x:Name="lbEredmeny" Foreground="LightGray" Margin="10 380 10 10" FontSize="20" Content="" HorizontalContentAlignment="Center"></Label>
+    </Grid>
+</Window>
